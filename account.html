@@ -6,12 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
-
 <title>Account | Axos</title>
 
-
 <style>
-
 
 *{
 margin:0;
@@ -25,11 +22,13 @@ Arial,sans-serif;
 }
 
 
-
 html{
-background:#03122d;
-}
 
+background:#03122d;
+
+height:100%;
+
+}
 
 
 body{
@@ -42,19 +41,15 @@ min-height:100vh;
 
 min-height:100dvh;
 
-
 padding-top:env(safe-area-inset-top);
 
 padding-bottom:env(safe-area-inset-bottom);
-
 
 overflow-x:hidden;
 
 }
 
 
-
-/* Glow */
 
 
 body::before{
@@ -67,20 +62,15 @@ width:500px;
 
 height:500px;
 
-
 background:#1d6fff20;
 
-
 border-radius:50%;
-
 
 top:-250px;
 
 right:-250px;
 
-
 filter:blur(120px);
-
 
 z-index:-1;
 
@@ -98,29 +88,21 @@ width:450px;
 
 height:450px;
 
-
 background:#00c6ff15;
 
-
 border-radius:50%;
-
 
 bottom:-220px;
 
 left:-220px;
 
-
 filter:blur(120px);
-
 
 z-index:-1;
 
 }
 
 
-
-
-/* Header */
 
 
 .header{
@@ -156,8 +138,6 @@ color:#b6c9ea;
 
 
 
-/* X Button */
-
 
 .close-btn{
 
@@ -176,7 +156,7 @@ height:50px;
 background:rgba(255,255,255,.08);
 
 
-border:1px solid rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.08);
 
 
 backdrop-filter:blur(20px);
@@ -185,25 +165,18 @@ backdrop-filter:blur(20px);
 border-radius:50%;
 
 
-
 display:flex;
 
-
 justify-content:center;
-
 
 align-items:center;
 
 
-
 text-decoration:none;
-
 
 color:white;
 
-
 font-size:32px;
-
 
 }
 
@@ -218,8 +191,6 @@ transform:rotate(90deg);
 
 
 
-/* Container */
-
 
 .container{
 
@@ -227,18 +198,16 @@ width:92%;
 
 max-width:900px;
 
-
 margin:auto;
 
-
 margin-top:40px;
+
+padding-bottom:30px;
 
 }
 
 
 
-
-/* Card */
 
 
 .card{
@@ -246,7 +215,7 @@ margin-top:40px;
 background:rgba(255,255,255,.06);
 
 
-border:1px solid rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.08);
 
 
 backdrop-filter:blur(25px);
@@ -268,19 +237,14 @@ margin-bottom:25px;
 
 
 
-/* Section */
-
 
 .section-title{
 
 font-size:14px;
 
-
 color:#b7caeb;
 
-
 margin-bottom:15px;
-
 
 letter-spacing:1px;
 
@@ -289,17 +253,14 @@ letter-spacing:1px;
 
 
 
-/* Row */
-
 
 .row{
 
-
 display:flex;
-
 
 justify-content:space-between;
 
+align-items:center;
 
 padding:15px 18px;
 
@@ -307,7 +268,7 @@ padding:15px 18px;
 background:rgba(255,255,255,.05);
 
 
-border:1px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.06);
 
 
 border-radius:15px;
@@ -324,7 +285,6 @@ margin-bottom:12px;
 
 color:#b7caeb;
 
-
 font-size:14px;
 
 }
@@ -335,15 +295,11 @@ font-size:14px;
 
 font-weight:500;
 
-
 color:white;
-
 
 letter-spacing:1px;
 
-
 word-break:break-all;
-
 
 -webkit-text-fill-color:white;
 
@@ -352,17 +308,12 @@ word-break:break-all;
 
 
 
-/* Badge */
-
 
 .badge{
 
-
 margin-bottom:25px;
 
-
 padding:18px;
-
 
 border-radius:15px;
 
@@ -370,7 +321,7 @@ border-radius:15px;
 background:rgba(29,111,255,.10);
 
 
-border:1px solid rgba(29,111,255,.25);
+border:1px solid rgba(29,111,255,.20);
 
 
 color:#b9d6ff;
@@ -380,7 +331,6 @@ text-align:center;
 
 
 font-size:14px;
-
 
 }
 
@@ -412,18 +362,15 @@ font-size:14px;
 
 
 
-<div class="container">
 
+<div class="container">
 
 
 <div class="card">
 
-
 <div class="badge">🏦 EVERYDAY CHECKING</div>
 
-
 <div class="section-title">DETAILS</div>
-
 
 
 <div class="row">
@@ -455,7 +402,6 @@ font-size:14px;
 <span class="value">United States</span>
 </div>
 
-
 </div>
 
 
@@ -464,12 +410,9 @@ font-size:14px;
 
 <div class="card">
 
-
 <div class="badge">💳 HIGH-YIELD SAVINGS</div>
 
-
 <div class="section-title">DETAILS</div>
-
 
 
 <div class="row">
@@ -501,7 +444,6 @@ font-size:14px;
 <span class="value">United States</span>
 </div>
 
-
 </div>
 
 
@@ -510,12 +452,9 @@ font-size:14px;
 
 <div class="card">
 
-
 <div class="badge">🏛 PLATINUM CARD</div>
 
-
 <div class="section-title">DETAILS</div>
-
 
 
 <div class="row">
@@ -549,7 +488,6 @@ font-size:14px;
 
 
 </div>
-
 
 
 </div>
