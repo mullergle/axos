@@ -43,7 +43,7 @@ body{
 
     padding-top:env(safe-area-inset-top);
 
-    padding-bottom:env(safe-area-inset-bottom);
+    padding-bottom:10px;
 
 
     overflow-x:hidden;
@@ -260,6 +260,8 @@ body::after{
     margin:auto;
 
 
+    padding-bottom:10px;
+
 }
 
 
@@ -419,9 +421,7 @@ body::after{
 
 
 <p>
-
 Manage your profile, settings and banking services.
-
 </p>
 
 
@@ -445,30 +445,6 @@ Manage your profile, settings and banking services.
 <h2>Profile</h2>
 
 <p>Personal information and preferences</p>
-
-</div>
-
-</div>
-
-
-<div class="arrow">›</div>
-
-</div>
-
-
-
-
-<div class="item" onclick="goToNotifications()">
-
-<div class="left">
-
-<div class="icon">🔔</div>
-
-<div class="text">
-
-<h2>Notifications</h2>
-
-<p>Alerts and message preferences</p>
 
 </div>
 
@@ -642,13 +618,6 @@ Manage your profile, settings and banking services.
 function goToProfile(){
 
 window.location.href="person.html";
-
-}
-
-
-function goToNotifications(){
-
-window.location.href="notification.html";
 
 }
 
