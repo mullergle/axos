@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
-
-<title>Notifications | Axos</title>
-
+<title>Security Center | Axos</title>
 
 <style>
-
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-
     font-family:-apple-system,BlinkMacSystemFont,
     "SF Pro Display",
     "Helvetica Neue",
     Arial,sans-serif;
 }
 
-
-
 html{
     background:#03122d;
-    height:100%;
 }
-
-
-
 
 body{
 
@@ -41,69 +30,63 @@ body{
     color:white;
 
     min-height:100vh;
-
     min-height:100dvh;
 
-
     padding-top:env(safe-area-inset-top);
-
     padding-bottom:env(safe-area-inset-bottom);
 
-
     overflow-x:hidden;
-
 }
 
 
+/* Glow background */
 
-
-
-body::before,
-body::after{
+body::before{
 
     content:'';
 
     position:fixed;
 
     width:500px;
-
     height:500px;
 
+    background:#1d6fff20;
+
     border-radius:50%;
+
+    top:-250px;
+    right:-250px;
 
     filter:blur(120px);
 
     z-index:-1;
-
 }
-
-
-
-body::before{
-
-    background:#1d6fff20;
-
-    top:-250px;
-
-    right:-250px;
-
-}
-
 
 
 body::after{
 
+    content:'';
+
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
     background:#00c6ff15;
 
-    bottom:-220px;
+    border-radius:50%;
 
+    bottom:-220px;
     left:-220px;
 
+    filter:blur(120px);
+
+    z-index:-1;
 }
 
 
 
-
+/* Header */
 
 .header{
 
@@ -114,16 +97,15 @@ body::after{
 }
 
 
-
-
 .header h1{
 
     font-size:45px;
 
     font-weight:400;
 
-}
+    letter-spacing:-1px;
 
+}
 
 
 .header p{
@@ -136,36 +118,29 @@ body::after{
 
 
 
-
-/* X button */
-
+/* X Button */
 
 .close-btn{
 
-
     position:absolute;
 
-
     top:40px;
-
 
     right:8%;
 
 
-
     width:50px;
 
-
     height:50px;
-
 
 
     background:rgba(255,255,255,.08);
 
 
-
     border:1px solid rgba(255,255,255,.1);
 
+
+    backdrop-filter:blur(20px);
 
 
     border-radius:50%;
@@ -174,9 +149,7 @@ body::after{
 
     display:flex;
 
-
     justify-content:center;
-
 
     align-items:center;
 
@@ -191,8 +164,9 @@ body::after{
     font-size:32px;
 
 
-}
+    transition:.4s;
 
+}
 
 
 .close-btn:hover{
@@ -203,161 +177,124 @@ body::after{
 
 
 
+/* Container */
 
 .container{
 
-
     width:92%;
 
-
     max-width:900px;
-
 
     margin:auto;
 
-
-
     margin-top:40px;
-
 
 }
 
 
 
-
+/* Card */
 
 .card{
 
-
     background:rgba(255,255,255,.06);
-
 
     border:1px solid rgba(255,255,255,.1);
 
-
     backdrop-filter:blur(25px);
-
 
     border-radius:25px;
 
+    padding:25px;
 
-    padding:20px;
-
-
-}
-
-
-
-
-.item{
-
-
-    padding:15px 18px;
-
-
-
-    background:rgba(255,255,255,.05);
-
-
-
-    border:1px solid rgba(255,255,255,.08);
-
-
-
-    border-radius:15px;
-
-
-
-    margin-bottom:12px;
-
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
 
 }
 
 
 
+/* Section */
 
-.title{
+.section-title{
 
-
-    font-size:15px;
-
-
-    font-weight:500;
-
-
-}
-
-
-
-
-.desc{
-
-
-    font-size:13px;
-
+    font-size:14px;
 
     color:#b7caeb;
 
+    margin-bottom:15px;
 
-    margin-top:4px;
-
-
-}
-
-
-
-
-.time{
-
-
-    font-size:11px;
-
-
-    color:#8fb3e6;
-
-
-    margin-top:5px;
-
+    letter-spacing:1px;
 
 }
 
 
 
+/* Rows */
 
-.limit{
+.row{
 
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 18px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* Labels */
+
+.label{
+
+    color:#b7caeb;
+
+    font-size:14px;
+
+}
+
+
+.value{
+
+    font-weight:500;
+
+    color:white;
+
+}
+
+
+
+/* Badge */
+
+.badge{
+
+    margin-bottom:25px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:rgba(0,255,140,.08);
+
+    border:1px solid rgba(0,255,140,.2);
+
+    color:#9dffd0;
 
     text-align:center;
 
-
-    margin:15px auto 0;
-
-
-    width:92%;
-
-
-    max-width:900px;
-
-
-    padding:15px;
-
-
-    padding-bottom:30px;
-
-
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-
-
-    color:#ffcc66;
-
-
-    font-size:13px;
-
+    font-size:14px;
 
 }
-
 
 
 </style>
@@ -368,21 +305,15 @@ body::after{
 <body>
 
 
-
 <div class="header">
-
 
 <a href="menu.html" class="close-btn">×</a>
 
+<h1>Security Center</h1>
 
-<h1>Notifications</h1>
-
-
-<p>Bank alerts and updates</p>
-
+<p>Monitor your account protection and safety status</p>
 
 </div>
-
 
 
 
@@ -393,55 +324,47 @@ body::after{
 <div class="card">
 
 
+<div class="badge">
 
-<div class="item">
+🛡️ Your account is currently protected and monitored
 
-<div class="title">Security Alert</div>
+</div>
 
-<div class="desc">New login detected from a verified device.</div>
 
-<div class="time">Today</div>
+
+<div class="section-title">
+LOGIN SECURITY
+</div>
+
+
+
+<div class="row">
+
+<span class="label">Login Status</span>
+
+<span class="value">Active Session</span>
 
 </div>
 
 
 
 
-<div class="item">
+<div class="row">
 
-<div class="title">Salary Deposit</div>
+<span class="label">Two-Factor Authentication</span>
 
-<div class="desc">$50,000 has been credited to your account.</div>
-
-<div class="time">Yesterday</div>
+<span class="value">Enabled</span>
 
 </div>
 
 
 
 
+<div class="row">
 
-<div class="item">
+<span class="label">Device Recognition</span>
 
-<div class="title">Card Payment</div>
-
-<div class="desc">Transaction of $240 approved successfully.</div>
-
-<div class="time">2 days ago</div>
-
-</div>
-
-
-
-
-
-<div class="item">
-
-<div class="title">Transfer Completed</div>
-
-<div class="desc">Your transfer was successfully processed.</div>
-
-<div class="time">3 days ago</div>
+<span class="value">Trusted Device</span>
 
 </div>
 
@@ -449,69 +372,42 @@ body::after{
 
 
 
-<div class="item">
+<div class="section-title" style="margin-top:25px;">
 
-<div class="title">Maintenance Notice</div>
-
-<div class="desc">System maintenance scheduled this weekend.</div>
-
-<div class="time">4 days ago</div>
+ACCOUNT SAFETY
 
 </div>
 
 
 
 
+<div class="row">
 
-<div class="item">
+<span class="label">Fraud Monitoring</span>
 
-<div class="title">ATM Withdrawal</div>
-
-<div class="desc">$120 withdrawal completed.</div>
-
-<div class="time">5 days ago</div>
+<span class="value">Active</span>
 
 </div>
 
 
 
 
+<div class="row">
 
-<div class="item">
+<span class="label">Encryption Level</span>
 
-<div class="title">New Feature</div>
-
-<div class="desc">You can now track spending in real-time.</div>
-
-<div class="time">1 week ago</div>
+<span class="value">AES-256</span>
 
 </div>
 
 
 
 
+<div class="row">
 
-<div class="item">
+<span class="label">Security Score</span>
 
-<div class="title">Deposit Received</div>
-
-<div class="desc">Funds received from external bank.</div>
-
-<div class="time">1 week ago</div>
-
-</div>
-
-
-
-
-
-<div class="item">
-
-<div class="title">Card Update</div>
-
-<div class="desc">Your card settings were updated successfully.</div>
-
-<div class="time">2 weeks ago</div>
+<span class="value">High</span>
 
 </div>
 
@@ -520,16 +416,7 @@ body::after{
 </div>
 
 
-<div class="limit">
-
-🚫 You have reached the maximum number of notifications.
-
 </div>
-
-
-
-</div>
-
 
 
 </body>
