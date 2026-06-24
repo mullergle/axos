@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
 
 <title>Menu | Axos</title>
 
@@ -13,130 +15,109 @@
 
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 
-    font-family:-apple-system,BlinkMacSystemFont,
-    "SF Pro Display",
-    "Helvetica Neue",
-    Arial,sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,
+"SF Pro Display",
+"Helvetica Neue",
+Arial,sans-serif;
+
 }
 
 
+
 html{
-    background:#03122d;
+
+background:#03122d;
+
 }
 
 
 
 body{
 
-    background:linear-gradient(135deg,#03122d,#07204b,#0d3475);
+background:linear-gradient(135deg,#03122d,#07204b,#0d3475);
 
-    color:white;
+color:white;
 
-    min-height:100vh;
+min-height:100vh;
 
-    min-height:100dvh;
+padding-top:env(safe-area-inset-top);
 
-
-    padding-top:env(safe-area-inset-top);
-
-    padding-bottom:10px;
-
-
-    overflow-x:hidden;
+overflow-x:hidden;
 
 }
 
 
-
-/* Background Glow */
 
 
 body::before{
 
-    content:'';
+content:'';
 
-    position:fixed;
+position:fixed;
 
+width:500px;
 
-    width:500px;
+height:500px;
 
-    height:500px;
+background:#1d6fff20;
 
+border-radius:50%;
 
-    background:#1d6fff20;
+top:-250px;
 
+right:-250px;
 
-    border-radius:50%;
+filter:blur(120px);
 
-
-    top:-250px;
-
-    right:-250px;
-
-
-    filter:blur(120px);
-
-
-    z-index:-1;
+z-index:-1;
 
 }
+
+
 
 
 
 body::after{
 
+content:'';
 
-    content:'';
+position:fixed;
 
+width:450px;
 
-    position:fixed;
+height:450px;
 
+background:#00c6ff15;
 
-    width:450px;
+border-radius:50%;
 
-    height:450px;
+bottom:-220px;
 
+left:-220px;
 
-    background:#00c6ff15;
+filter:blur(120px);
 
-
-
-    border-radius:50%;
-
-
-
-    bottom:-220px;
-
-
-    left:-220px;
-
-
-
-    filter:blur(120px);
-
-
-
-    z-index:-1;
+z-index:-1;
 
 }
 
 
 
 
-/* Header */
+
+
+/* HEADER */
 
 
 .header{
 
+padding:40px 8%;
 
-    padding:40px 8%;
-
-
-    position:relative;
+position:relative;
 
 }
 
@@ -144,15 +125,9 @@ body::after{
 
 .header h1{
 
+font-size:55px;
 
-    font-size:55px;
-
-
-    font-weight:400;
-
-
-    letter-spacing:-2px;
-
+font-weight:400;
 
 }
 
@@ -160,161 +135,87 @@ body::after{
 
 .header p{
 
+margin-top:10px;
 
-    margin-top:10px;
-
-
-    color:#b6c9ea;
-
+color:#b6c9ea;
 
 }
 
 
 
-
-/* Close Button */
 
 
 .close-btn{
 
+position:absolute;
 
-    position:absolute;
+top:40px;
 
+right:8%;
 
-    top:40px;
+width:50px;
 
+height:50px;
 
-    right:8%;
+background:rgba(255,255,255,.08);
 
+border-radius:50%;
 
+display:flex;
 
-    width:50px;
+justify-content:center;
 
+align-items:center;
 
-    height:50px;
+text-decoration:none;
 
+color:white;
 
-
-    background:rgba(255,255,255,.08);
-
-
-
-    border:1px solid rgba(255,255,255,.1);
-
-
-
-    backdrop-filter:blur(20px);
-
-
-
-    border-radius:50%;
-
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-
-    text-decoration:none;
-
-
-    color:white;
-
-
-    font-size:32px;
-
-
+font-size:32px;
 
 }
 
 
-
-.close-btn:hover{
-
-
-    transform:rotate(90deg);
-
-}
-
-
-
-
-/* Container */
 
 
 .container{
 
+width:92%;
 
-    width:92%;
+max-width:900px;
 
+margin:auto;
 
-    max-width:900px;
-
-
-    margin:auto;
-
-
-    padding-bottom:10px;
+padding-bottom:30px;
 
 }
 
 
 
 
-/* Menu Items */
-
-
 .item{
 
+background:rgba(255,255,255,.05);
 
-    background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
 
+backdrop-filter:blur(25px);
 
+border-radius:25px;
 
-    border:1px solid rgba(255,255,255,.08);
+padding:28px;
 
+margin-bottom:20px;
 
+display:flex;
 
-    backdrop-filter:blur(25px);
+justify-content:space-between;
 
+align-items:center;
 
+cursor:pointer;
 
-    border-radius:25px;
-
-
-
-    padding:28px;
-
-
-
-    margin-bottom:20px;
-
-
-
-    display:flex;
-
-
-
-    justify-content:space-between;
-
-
-
-    align-items:center;
-
-
-
-    transition:.3s;
-
-
-
-    cursor:pointer;
-
+transition:.3s;
 
 }
 
@@ -322,12 +223,9 @@ body::after{
 
 .item:hover{
 
+transform:translateX(8px);
 
-    background:rgba(255,255,255,.08);
-
-
-    transform:translateX(8px);
-
+background:rgba(255,255,255,.1);
 
 }
 
@@ -335,15 +233,11 @@ body::after{
 
 .left{
 
+display:flex;
 
-    display:flex;
+align-items:center;
 
-
-    align-items:center;
-
-
-    gap:18px;
-
+gap:18px;
 
 }
 
@@ -351,9 +245,7 @@ body::after{
 
 .icon{
 
-
-    font-size:28px;
-
+font-size:28px;
 
 }
 
@@ -361,12 +253,9 @@ body::after{
 
 .text h2{
 
+font-size:22px;
 
-    font-size:22px;
-
-
-    font-weight:500;
-
+font-weight:500;
 
 }
 
@@ -374,15 +263,11 @@ body::after{
 
 .text p{
 
+margin-top:5px;
 
-    color:#b7caeb;
+color:#b7caeb;
 
-
-    margin-top:5px;
-
-
-    font-size:15px;
-
+font-size:15px;
 
 }
 
@@ -390,19 +275,16 @@ body::after{
 
 .arrow{
 
+font-size:25px;
 
-    font-size:25px;
-
-
-    color:#7fb8ff;
-
+color:#7fb8ff;
 
 }
 
 
 
-
 </style>
+
 
 </head>
 
@@ -411,17 +293,28 @@ body::after{
 
 
 
+
+
 <div class="header">
 
 
-<a href="dashboard.html" class="close-btn">×</a>
+<a href="dashboard.html" class="close-btn">
+×
+</a>
 
 
-<h1>Menu</h1>
+
+<h1>
+
+Menu
+
+</h1>
 
 
 <p>
+
 Manage your profile, settings and banking services.
+
 </p>
 
 
@@ -430,30 +323,52 @@ Manage your profile, settings and banking services.
 
 
 
+
+
+
+
 <div class="container">
 
 
 
-<div class="item" onclick="goToProfile()">
+
+
+<div class="item" onclick="goToPerson()">
+
 
 <div class="left">
 
-<div class="icon">👤</div>
+
+<div class="icon">
+👤
+</div>
+
 
 <div class="text">
 
-<h2>Profile</h2>
+<h2>
+Profile
+</h2>
 
-<p>Personal information and preferences</p>
+<p>
+Personal information and preferences
+</p>
+
+</div>
+
 
 </div>
 
+
+<div class="arrow">
+›
 </div>
 
 
-<div class="arrow">›</div>
-
 </div>
+
+
+
 
 
 
@@ -461,24 +376,77 @@ Manage your profile, settings and banking services.
 
 <div class="item" onclick="goToSettings()">
 
+
 <div class="left">
 
-<div class="icon">⚙️</div>
+
+<div class="icon">
+⚙️
+</div>
+
 
 <div class="text">
 
-<h2>Settings</h2>
+<h2>
+Settings
+</h2>
 
-<p>Security and account options</p>
+<p>
+Security and account options
+</p>
+
+</div>
+
 
 </div>
 
+
+<div class="arrow">
+›
 </div>
 
 
-<div class="arrow">›</div>
+</div>
+
+
+
+
+
+
+<div class="item" onclick="goToAccount()">
+
+
+<div class="left">
+
+
+<div class="icon">
+💳
+</div>
+
+
+<div class="text">
+
+<h2>
+Account
+</h2>
+
+<p>
+Account information
+</p>
 
 </div>
+
+
+</div>
+
+
+<div class="arrow">
+›
+</div>
+
+
+</div>
+
 
 
 
@@ -486,24 +454,45 @@ Manage your profile, settings and banking services.
 
 <div class="item" onclick="goToStatement()">
 
+
+
 <div class="left">
 
-<div class="icon">📊</div>
+
+<div class="icon">
+📊
+</div>
+
 
 <div class="text">
 
-<h2>Statements</h2>
 
-<p>View account history</p>
+<h2>
+Statements
+</h2>
+
+
+<p>
+View account history
+</p>
+
 
 </div>
 
+
+</div>
+
+
+
+<div class="arrow">
+›
 </div>
 
 
-<div class="arrow">›</div>
-
 </div>
+
+
+
 
 
 
@@ -511,24 +500,47 @@ Manage your profile, settings and banking services.
 
 <div class="item" onclick="goToSecurity()">
 
+
+
 <div class="left">
 
-<div class="icon">🛡️</div>
+
+<div class="icon">
+🛡️
+</div>
+
+
 
 <div class="text">
 
-<h2>Security Center</h2>
 
-<p>Password and account protection</p>
+<h2>
+Security Center
+</h2>
+
+
+<p>
+Password and account protection
+</p>
+
+
 
 </div>
 
+
+</div>
+
+
+
+<div class="arrow">
+›
 </div>
 
 
-<div class="arrow">›</div>
-
 </div>
+
+
+
 
 
 
@@ -536,24 +548,47 @@ Manage your profile, settings and banking services.
 
 <div class="item" onclick="goToHelp()">
 
+
+
 <div class="left">
 
-<div class="icon">❓</div>
+
+<div class="icon">
+❓
+</div>
+
+
 
 <div class="text">
 
-<h2>Help & Support</h2>
 
-<p>Contact us and FAQs</p>
+<h2>
+Help & Support
+</h2>
+
+
+<p>
+Contact us and FAQs
+</p>
+
+
 
 </div>
 
+
+</div>
+
+
+
+<div class="arrow">
+›
 </div>
 
 
-<div class="arrow">›</div>
-
 </div>
+
+
+
 
 
 
@@ -561,24 +596,47 @@ Manage your profile, settings and banking services.
 
 <div class="item" onclick="goToAi()">
 
+
+
 <div class="left">
 
-<div class="icon">🤖</div>
+
+<div class="icon">
+🤖
+</div>
+
+
 
 <div class="text">
 
-<h2>Chat With Us</h2>
 
-<p>Send an in-app chat</p>
+<h2>
+Chat With Us
+</h2>
+
+
+<p>
+Send an in-app chat
+</p>
+
+
 
 </div>
 
+
+</div>
+
+
+
+<div class="arrow">
+›
 </div>
 
 
-<div class="arrow">›</div>
-
 </div>
+
+
+
 
 
 
@@ -586,33 +644,61 @@ Manage your profile, settings and banking services.
 
 <div class="item" onclick="goToLogout()">
 
+
+
 <div class="left">
 
-<div class="icon">🚪</div>
+
+<div class="icon">
+🚪
+</div>
+
+
 
 <div class="text">
 
-<h2>Log Out</h2>
 
-<p>Sign out of your account securely</p>
-
-</div>
-
-</div>
+<h2>
+Log Out
+</h2>
 
 
-<div class="arrow">›</div>
-
-</div>
+<p>
+Sign out of your account securely
+</p>
 
 
 
 </div>
+
+
+</div>
+
+
+
+<div class="arrow">
+›
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
 
 
 
 
 <script>
+
 
 
 function goToProfile(){
@@ -622,6 +708,7 @@ window.location.href="person.html";
 }
 
 
+
 function goToSettings(){
 
 window.location.href="settings.html";
@@ -629,11 +716,13 @@ window.location.href="settings.html";
 }
 
 
+
 function goToStatement(){
 
-window.location.href="statement.html";
+window.location.href="statements.html";
 
 }
+
 
 
 function goToSecurity(){
@@ -643,6 +732,7 @@ window.location.href="security.html";
 }
 
 
+
 function goToHelp(){
 
 window.location.href="help.html";
@@ -650,22 +740,45 @@ window.location.href="help.html";
 }
 
 
-function goToLogout(){
-
-window.location.href="logout.html";
-
-}
-
 
 function goToAi(){
 
-window.location.href="ai.html";
+window.location.href="chat.html";
 
 }
+
+
+
+
+function goToAccount(){
+
+window.location.href="account.html";
+
+}
+
+
+
+
+function goToLogout(){
+
+
+localStorage.removeItem("adminLoggedIn");
+
+localStorage.removeItem("adminAccess");
+
+
+window.location.href="login.html";
+
+
+}
+
 
 
 
 </script>
+
+
+
 
 
 
