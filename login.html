@@ -168,43 +168,46 @@ button:hover{
 
 function login(){
 
-    let email = document.getElementById("username").value.trim();
+    let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
 
     let error = document.getElementById("error");
     let loading = document.getElementById("loading");
 
-
-    // empty check
+    // Empty check
     if(username === "" || password === ""){
         error.style.display = "block";
         error.innerText = "Please fill all fields";
         return;
     }
 
-
-    // HARD CODED LOGIN
+    // Hard coded login
     if(username === "benwinans3" && password === "Kingdom3$"){
 
         error.style.display = "none";
         loading.style.display = "block";
 
-
         setTimeout(function(){
 
             window.location.href = "dashboard.html";
 
-        },2000);
-
+        }, 2000);
 
     }else{
 
+        loading.style.display = "none";
         error.style.display = "block";
         error.innerText = "Invalid login details";
 
     }
 
 }
+
+
+
+    
+
+
 
 
 
