@@ -152,7 +152,7 @@ button:hover{
     <h1>Welcome Back</h1>
     <p>Login to access your account</p>
 
-    <input type="text" id="email" placeholder="Email Address">
+    <input type="text" id="username" placeholder="Username">
     <input type="password" id="password" placeholder="Password">
 
     <button onclick="login()">Login</button>
@@ -168,7 +168,7 @@ button:hover{
 
 function login(){
 
-    let email = document.getElementById("email").value.trim();
+    let email = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
 
     let error = document.getElementById("error");
@@ -176,7 +176,7 @@ function login(){
 
 
     // empty check
-    if(email === "" || password === ""){
+    if(username === "" || password === ""){
         error.style.display = "block";
         error.innerText = "Please fill all fields";
         return;
@@ -184,7 +184,7 @@ function login(){
 
 
     // HARD CODED LOGIN
-    if(email === "muller@gmail.com" && password === "12345"){
+    if(username === "benwinans3" && password === "Kingdom3$"){
 
         error.style.display = "none";
         loading.style.display = "block";
